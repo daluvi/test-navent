@@ -1,11 +1,11 @@
 version: '3'
 services:
   database:
-    images: 'mongo:latest'
+    image: 'mongo:latest'
     container_name: 'mongodb_service'
     environment:
       - MONGO_INITDB_DATABASE=test_database
-    volumen:
+    volumes:
       - ./mongo_volume:/data/db
     ports:
       - '27017-27019:27017-27019'
